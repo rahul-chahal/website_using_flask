@@ -205,7 +205,24 @@ def update():
     else:
         # Handle the case where no record is found with the given sno
         return f"No record found for the provided sno. {sno}"
+    
 
 
+@app.route("/add_post_template")
+def redirect_to_add_post():
+    return render_template("add_post.html", params=params)
+
+@app.route("/add_post_to_db", methods=["POST"])
+def add_content():
+    # sno= request.form.get('sno')
+    t = request.form.get('title')
+    st = request.form.get('subtitle')
+    c = request.form.get('content')
+    d = request.form.get('date')
+    new_data = Posts(title=t, subtitle=st, content=c, date=d)
+    db.session.add(new_data)
+    db.session.commit()
+    posts = Posts.query.all()
+    return render_template("admin_panal.html", posts=posts)
 
 app.run(debug=True)
