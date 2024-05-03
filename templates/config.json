@@ -2,14 +2,14 @@
     "config": 
     {
         "local_server":"mysql://root:@localhost/rahul?unix_socket=/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock",
-        "fb_url":"https://fb.com/rahul.chahal.9847",
+        "fb_url":"#",
         "twitter_url":"#",
         "github_url":"#",
         "no_of_post": 4,
         "mail_server" : "smtp.gmail.com",
         "mail_port" : 465,
-        "mail_id" : "mailerbot8@gmail.com",
-        "mail_pwd" : "gboboszvjbgpisoh",
+        "mail_id" : "#",
+        "mail_pwd" : "#",
         "SECRET_KEY" : "super secret key",
         "SESSION_TYPE" : "filesystem"
    
